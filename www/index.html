@@ -1,0 +1,65 @@
+<!--
+* Author: Aidan mcArdle
+* Assignment: WE4 Mobile Web Applications, Digital Skills Academy
+* Date : 2016/07/05
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+    <!---->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Forget Me Knot</title>
+</head>
+
+<body ng-app="myToDoModule" ng-controller="myToDoController">
+    <div class="app">
+        <div class="splash">
+            <!---->
+            <h1>Add a task</h1>
+        
+            <!--when form submitted (via button click or enter press), invoke addNewTask() function-->
+            <form ng-submit="addNewTask()">
+                <!--User input box-->
+                <input ng-model="userInputBox" placeholder="What to do today.. ?">
+                <!--button to invoke addNewTask function, no need for ng-click as form allows keypress Enter *and* button press-->
+                <button id="addButton">Add</button>
+            </form>
+        </div>
+
+        <!--simple list to display all tasks-->
+        <ul>
+            <!--list iterates through each object in tasksArray-->      
+            <li ng-repeat="t in tasksArray track by $index">
+                <div class="todoItem">
+                    <!--text part of single ToDo item. <span> wrap to allow change of style on completion-->
+                    <div class="taskText">
+                        <span class="{{t.complete}}">{{t.taskMessage}}</span>
+                    </div>
+                    <!--buttons for 'complete' and 'delete' linked back to js script functions-->
+                    <button id="tickButton" ng-click="markAsComplete($index)">&#10003;</button>
+                    <button id="crossButton" ng-click="deleteTask()">&#10007;</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!--custom & angular javascript-->
+    <script src="js/script.js"></script>
+    <script src="js/angular.min.js"></script>  
+
+    <!--cordova requirements-->  
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

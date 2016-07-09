@@ -1,0 +1,221 @@
+@font-face {
+    font-family: "Suez One";
+    src: url("../res/fonts/SuezOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../res/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+
+html, body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: text;                  /* allows copy-paste, to prevent, change 'text' to 'none' */
+
+    background-color:#6DA599;
+
+    font-family: 'Roboto', sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    border: 0;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    width:330px;
+ /* background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+ /* position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    text-align:center;
+    margin: 0 auto;
+    font-size: 18px;                                
+}
+
+.splash{
+    width:100%;
+    background-color:#EDACF2;
+    border-radius:5px;
+    margin:30px 0px 10px 0px;
+    padding: 5px;
+    overflow: auto;
+}
+
+h1 {
+    font-family: 'Suez One', serif;
+    font-size:50px;
+    color:#A165A5;
+    text-align:center;
+    margin: 0 auto;
+}
+
+input{
+    color:#A165A5;
+    display: block;
+    padding: 5px;
+    font-size: 19px;
+    display:inline-block;
+    width: 250px;
+    float:left;
+    border-radius:5px;
+    border:none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #6DA599;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #6DA599;
+  opacity:1;
+  font-style:italic;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #6DA599;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #6DA599;
+}
+
+ul, li{                         /** +li for IE fix **/
+    list-style-type: none;      /** remove bullets **/
+    padding: 0;                 /** remove indents **/
+    margin: 0;                  /** remove indents **/
+    display:inline-block;
+}  
+
+.todoItem {
+    width:100%;
+    padding: 5px;
+    background-color:#f2e1ac;
+    color:#A165A5;
+    display:inline-block;
+    border-radius:5px;
+}
+
+.taskText{
+    text-transform: lowercase;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size:20px;
+    text-align:left;
+    float:left;
+    padding:3px;
+    width:250px;
+}
+
+button {
+    color:#ffffff;
+    font-size:18px;
+    background-color:#A165A5;
+    border:1px solid #A165A5;
+    height:30px;
+    width:30px;
+    margin-left: 5px;
+    display:inline-block;
+    float: right;
+
+    border-radius:50%;
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+}
+
+#addButton{
+    background-color:#A165A5;
+    border:1px solid #A165A5;
+    height: 33px;
+    width:65px;
+    float:right;
+    border-radius:5px;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+    margin-right:0px; /*5px*/
+}
+
+#addButton:hover{
+    background-color:#75BFAE;
+    border:1px solid #75BFAE;
+}
+
+
+#tickButton{
+    background-color:#A165A5;
+    border:1px solid #A165A5;
+}
+
+#tickButton:hover {
+    background-color:#EDACF2;
+    border: 1px solid #EDACF2;
+}
+
+#crossButton{
+    background-color:#75BFAE;
+    border:1px solid #75BFAE;
+}
+
+#crossButton:hover {
+    background-color:#6DA599;
+    border:1px solid #6DA599;
+}
+
+
+
+.done{
+    text-decoration: line-through;
+    font-style: italic;
+    color:#6DA599;
+}
+
+
+/* Landscape layout (with min-width) */
+/*@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+/*    .app {
+/*        background-position:left center;
+/*        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+/*        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+/*                                      /* offset horizontal: half of image width and text area width */
+/*    }
+/*}*/
+
+/*
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+*/
